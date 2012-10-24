@@ -141,3 +141,44 @@ dependencies[] = devel_generate
 ; -- Theme --
 
 ; theme = omega
+
+
+; -- Taxonomy --
+
+terms[sponsorship][name] = "Sponsorship"
+terms[sponsorship][vocabulary_machine_name] = project_type
+terms[sponsoship][weight] = 1
+
+terms[events][name] = "Events"
+terms[events][vocabulary_machine_name] = project_type
+terms[events][weight] = 2
+
+terms[graphicdesign][name] = "Graphic Design"
+terms[graphicdesign][vocabulary_machine_name] = project_type
+terms[graphicdesign][weight] = 3
+
+terms[prcomms][name] = "PR & Communications"
+terms[prcomms][vocabulary_machine_name] = project_type
+terms[prcomms][weight] = 4
+
+terms[spring][name] = "Spring"
+terms[spring][vocabulary_machine_name] = season
+terms[spring][weight] = 5
+
+terms[summer][name] = "Summer"
+terms[summer][vocabulary_machine_name] = season
+terms[summer][weight] = 6
+
+terms[autmumn][name] = "Autumn"
+terms[autumn][vocabulary_machine_name] = season
+terms[autumn][weight] = 7
+
+terms[winter][name] = "Winter"
+terms[winter][vocabulary_machine_name] = season
+terms[winter][weight] = 8
+
+
+
+
+
+
