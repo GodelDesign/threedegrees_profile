@@ -71,7 +71,7 @@ projects[jquery_update][subdir] = "contrib"
 projects[menu_block][version] = "2.3"
 projects[menu_block][subdir] = "contrib"
 
-projects[metatag][version] = "1.0-alpha6"
+projects[metatag][version] = "1.0-beta1"
 projects[metatag][subdir] = "contrib"
 
 projects[nodeformcols][version] = "1.x-dev"
@@ -83,16 +83,16 @@ projects[page_title][subdir] = "contrib"
 projects[panels][version] = "3.2"
 projects[panels][subdir] = "contrib"
 
-projects[pathauto][version] = "1.0"
+projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = "contrib"
 
 projects[plupload][version] = "1.0-rc1"
 projects[plupload][subdir] = "contrib"
 
-projects[prod_check][version] = "1.3"
+projects[prod_check][version] = "1.4"
 projects[prod_check][subdir] = "contrib"
 
-projects[redirect][version] = "1.0-beta4"
+projects[redirect][version] = "1.0-rc1"
 projects[redirect][subdir] = "contrib"
 
 projects[rules][version] = "2.1"
@@ -148,7 +148,7 @@ projects[uuid_features][version] = "1.0-alpha1"
 projects[uuid_features][subdir] = "contrib"
 
 ; Image Editor
-projects[imageeditor][version] = "1.8"
+projects[imageeditor][version] = "1.9"
 projects[imageeditor][subdir] = "contrib"
 
 ; Libraries
