@@ -11,11 +11,11 @@ function threedegrees_global_blank_page() {
  * Generates a page to block unsupported browsers
  */
 function threedegrees_global_incompatible_browser_page() {
-  
+
   /* add some extra CSS to the page that we don't normally include */
   drupal_add_css(drupal_get_path('module', 'threedegrees_global') . '/css/browser-deny.css', 'file');
   $browser = browscap_get_browser();
-  
+
   $output = '';
   $output .= '<table width="100%">';
   $output .= '<tr>';
@@ -44,7 +44,7 @@ function threedegrees_global_incompatible_browser_page() {
   $output .= '<td width="10000"></td>';
   $output .= '</tr>';
   $output .= '</table>';
-  
+
   return $output;
-  
+
 }

@@ -19,6 +19,7 @@
 
 #region-content {
   width: 100%;
+  margin: 0;
 }
 
 html a{
@@ -101,4 +102,39 @@ html .block-panels-mini-menu {
     width: 900px;
     margin: 0 auto;
   }
+}
+
+/* front page */
+
+.views-field-field-slideshow-images {
+  ul {
+    li {
+      margin: 0;
+      float: left;
+      display: block;
+    }
+  }
+}
+#slideshow_pag {
+  width: 36px;
+  margin: 0 auto;
+  a {
+    span {
+      @sprite-pagination-inactive;
+      @remove-text;
+    }
+  }
+  a.selected {
+    span {
+      @sprite-pagination-active;
+    }
+
+  }
+}
+.view-footer {
+  height: 10px;
+  width: 100%;
+  .transparent-white;
+  position: absolute;
+  bottom: 12px;
 }
