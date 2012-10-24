@@ -135,7 +135,6 @@ projects[features][version] = "1.0-rc3"
 projects[features][subdir] = "contrib"
 
 
-
 ; Display Suite
 projects[ds][version] = "1.5"
 projects[ds][subdir] = "contrib"
@@ -156,7 +155,7 @@ projects[libraries][version] = "1.0"
 projects[libraries][subdir] = "contrib"
 
 ; Less
-projects[less][version] = "2.5"
+projects[less][version] = "2.6"
 projects[less][subdir] = "contrib"
 projects[less][patch][] = "http://drupal.org/files/1536582-look-harder-for-library-4.patch"
 
