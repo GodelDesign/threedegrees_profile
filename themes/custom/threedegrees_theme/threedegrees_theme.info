@@ -51,6 +51,10 @@ zones[footer] = Footer
 
 ; STYLESHEETS
 
+css[walbaum.css][name] = Walbaum Font
+css[walbaum.css][description] = Information for the Walbum font
+css[walbaum.css][options][weight] = 9
+
 css[global.css.less][name] = Your custom global styles
 css[global.css.less][description] = This file holds all the globally active custom CSS of your theme.
 css[global.css.less][options][weight] = 10
