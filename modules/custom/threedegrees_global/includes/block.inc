@@ -20,6 +20,15 @@ function threedegrees_global_block_info() {
     'info' => t('Front Page Blurb'),
   );
 
+      // Services heading
+    $blocks['services'] = array(
+    'info' => t('Services Heading'),
+  );
+
+      // Services blurb
+    $blocks['servicesblurb'] = array(
+    'info' => t('Services Blurb'),
+  );
   return $blocks;
 }
 
@@ -61,6 +70,36 @@ function threedegrees_global_block_frontpageblurb_view() {
 
   $content = '';
   $content .= '<div class="frontpageblurb"><p> 3 Degrees Marketing is a Melbourne based marketing agency, with a strong brand reputation and an enviable list of clients across Australia and New Zealand.</p><p>From sponsorship and commercial rights management to company rebrands, communication strategies, PR, graphic design and event management, our team utilises a strong network of contacts to provide exceptional results.</p></div>';
+
+  $block['content'] = $content;
+
+  return $block;
+}
+
+/**
+ * Renders the servcices title block.
+ */
+function threedegrees_global_block_services_view() {
+  $block = array();
+  $block['subject'] = '';
+
+  $content = '';
+  $content .= '<h2>Our Services</h2>';
+
+  $block['content'] = $content;
+
+  return $block;
+}
+
+/**
+ * Renders the front page blurb block.
+ */
+function threedegrees_global_block_servicesblurb_view() {
+  $block = array();
+  $block['subject'] = '';
+
+  $content = '';
+  $content .= '<div class="servicesblurb"><p> From sponsorship and commercial rights management to company rebrands, communication strategies, PR, graphic design and event management, our team utilises a strong network of contacts to provide exceptional results.</p></div>';
 
   $block['content'] = $content;
 

@@ -24,6 +24,9 @@
   color: black;
   text-transform: uppercase;
   letter-spacing: 3px;
+  text-align: center;
+  width: 250px;
+  margin: 0 auto;
 }
 
 .p-intro-text {
@@ -43,6 +46,7 @@
   text-transform: uppercase;
 }
 
+/* this mixin requires a div wrapper with a p inside */
 .box-title {
       margin-top: 0px;
       background-color: @highlight-grey;
@@ -57,4 +61,12 @@
         text-transform: uppercase;
         margin-left: 5px;
       }
+}
+
+.p-bullets {
+  font-family: Knockout;
+  font-size: 16px;
+  li {
+    line-height: 24px;
+    }
 }
