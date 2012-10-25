@@ -7,6 +7,10 @@
 
 /* omega overrides */
 
+.breadcrumb {
+  display:none;
+}
+
 .container-12 {
   width: 100%!important;
   margin: 0!important;
@@ -24,6 +28,12 @@
 
 #region-menu {
   height: 0;
+}
+
+#region-footer-first {
+  margin: 0;
+  width: 100%;
+  background-color: white;
 }
 
 html a{
@@ -82,6 +92,9 @@ html .block-panels-mini-menu {
 }
 
 #region-footer-second {
+  .twitter {
+      margin-right: 11px;
+}
   margin: 0;
   background-color: #c3c9cd;
   width: 100%;
@@ -90,10 +103,16 @@ html .block-panels-mini-menu {
       float: left;
       margin-bottom: 50px;
 
+  li.contactdetails {
+    margin-left: 0px!important;
+  }
   li {
+    a {
+      color: @footer-grey;
+    }
       float: left;
       width: 200px;
-      margin-right: 25px;
+      margin-left: 33px;
       .p-footer-text;
     }
       .contactdetails {
@@ -161,7 +180,68 @@ html #slideshow_pag {
 
 .frontpageblurb {
   width: 658px;
+  margin-bottom: 48px;
+  margin-top: 34px;
+
   p {
     .p-intro-text;
+  }
+}
+
+.view-id-news.view-display-id-block {
+  .views-row {
+    width: 200px;
+    height: 105px;
+    margin-right: 25px;
+    display: block;
+    float: left;
+  }
+}
+
+
+
+#block-views-news-block {
+  h2 {
+    .p-heading-walbaum ;
+    width: 89px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .newstile {
+    div:first-child {
+        .box-title;
+      p {
+        .p-page-heading;
+        }
+    }
+    div {
+      .p-news-titles;
+      margin-top: 18px;
+      color: @almost-black;
+    }
+  }
+  width: 900px;
+  margin: 0 auto;
+}
+
+
+/* services page */
+
+#block-views-services-block {
+  .views-row-1 {
+      margin-left: 0px!important;
+  }
+  .views-row {
+    .servicescategory {
+      background-color: @almost-black!important;
+      .box-title;
+      p {
+        .p-page-heading;
+      }
+    }
+    float: left;
+    width: 200px;
+    margin-left: 33px;
   }
 }
