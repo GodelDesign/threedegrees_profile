@@ -7,6 +7,10 @@
 
 /* omega overrides */
 
+tr:hover td, tr.even:hover td.active, tr.odd:hover, td.active {
+  background-color: transparent!important;
+}
+
 .breadcrumb {
   display:none;
 }
@@ -257,4 +261,58 @@ html #slideshow_pag {
   .p-intro-text;
   margin-top: 31px;
   margin-bottom: 42px;
+}
+
+/* projects page */
+
+.block-views-projects-block {
+  margin-bottom: 51px;
+  .projectdescription {
+    .p-bodycopy;
+    margin-top: 16px;
+  }
+  td.col-1 {
+    margin-left: 0px!important;
+  }
+  td {
+    width: 280px;
+    height: 262px;
+    margin-left: 29px;
+  }
+  .projectitle{
+      width: 280px!important;
+      background-color: @almost-black!important;
+      .box-title;
+  }
+  h2 {
+    .p-heading-walbaum;
+    margin-top: 35px!important;
+    margin-bottom: 38px!important;
+  }
+}
+
+/* single project view */
+
+.node-project.view-mode-full {
+  .group-left {
+    width: 620px;
+  }
+  .group-right {
+    width: 280px;
+  }
+.field-name-field-additional-images {
+  .field-item{
+      float: left;
+      margin-right: 30px;
+      margin-top: 18px;
+  }
+}
+.field-name-body {
+  .p-bodycopy;
+}
+.field-name-field-long-title-tagline {
+  .p-heading-walbaum;
+  margin-top: 41px!important;
+  margin-bottom: 39px!important;
+}
 }
