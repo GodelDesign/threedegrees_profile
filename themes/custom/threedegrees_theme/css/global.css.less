@@ -40,6 +40,14 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover, td.active {
   background-color: white;
 }
 
+#region-sidebar-first {
+  float:right;
+}
+
+#region-preface-second {
+  width: 100%;
+}
+
 html a{
   text-decoration: none;
   color: auto!important;
@@ -179,11 +187,68 @@ html #slideshow_pag {
   }
 }
 
+#block-threedegrees-global-frontpageblurb {
+  width: 670px;
+  float: left;
+  margin-right: 30px;
+}
+
+#block-panels-mini-newsletter-form {
+  margin-top: 21px;
+  padding-bottom: 30px;
+  p.newsletterintro {
+    .p-bodycopy;
+    margin: 13px 0;
+    float:left;
+  }
+  .newsletterheading {
+    background-color: @almost-black!important;
+    .box-title;
+  }
+  .button {
+    float: right;
+    margin: 0;
+    input {
+      padding: 0;
+      margin: 0;
+    font-family: Knockout;
+    font-size: 22px;
+    text-transform: uppercase;
+    height: 26px;
+    border: 0px;
+    background-color: transparent;
+    background: transparent;
+    text-align: right;
+    }
+  }
+  width: 200px;
+  float: left;
+  div {
+    width: 200px;
+    float: left;
+    span {
+      float: left;
+      .p-bodycopy;
+      text-transform: uppercase;
+      height: 23px;
+      width: 80px;
+      display: block;
+    }
+    input {
+      width: 120px;
+      float: right!important;
+      display: block;
+      height: 16px;
+      background-color: @highlight-grey;
+      border-color: #C3C9CD!important;
+    }
+  }
+}
 
 .frontpageblurb {
-  width: 658px;
+  width: 670px;
   margin-bottom: 48px;
-  margin-top: 34px;
+  margin-top: 20px;
 
   p {
     .p-intro-text;
@@ -271,6 +336,9 @@ html #slideshow_pag {
     .p-bodycopy;
     margin-top: 16px;
   }
+  img:hover {
+  opacity: 0.5;
+  }
   td.col-1 {
     margin-left: 0px!important;
   }
@@ -298,6 +366,21 @@ html #slideshow_pag {
     width: 620px;
   }
   .group-right {
+    ul {
+      list-style: disc;
+      margin-left: 18px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+    p {
+      margin-bottom: 12px;
+    }
+      p.subheading {
+  font-size: 22px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  }
     width: 280px;
   }
 .field-name-field-additional-images {
@@ -309,10 +392,124 @@ html #slideshow_pag {
 }
 .field-name-body {
   .p-bodycopy;
+
 }
 .field-name-field-long-title-tagline {
   .p-heading-walbaum;
   margin-top: 41px!important;
   margin-bottom: 39px!important;
+}
+}
+
+.group-footer {
+        padding-top: 35px!important;
+    h2 {
+    .p-heading-walbaum;
+    margin-bottom: 3px!important;
+  }
+}
+.view-id-projects.view-display-id-block_1 {
+    margin-bottom: 51px;
+  .projectdescription {
+    .p-bodycopy;
+    margin-top: 16px;
+  }
+  td.col-1 {
+    margin-left: 0px!important;
+  }
+  td {
+    width: 280px;
+    height: 85px;
+    margin-left: 29px;
+  }
+  .projectitle{
+      width: 280px!important;
+      background-color: @almost-black!important;
+      .box-title;
+  }
+}
+
+
+/* news overview page */
+
+#block-views-news-block-1 {
+  width: 590px;
+  float: left;
+  margin-right: 30px;
+  .view-content {
+    .p-bodycopy;
+    .longtitle {
+      padding-top: 12px;
+      font-size: 34px!important;
+      .p-intro-text;
+    }
+    .categorylabel {
+      .box-title;
+      background-color: @almost-black!important;
+    }
+  }
+}
+
+.view-id-news.view-display-id-block_2 {
+  .field-content {
+    p {
+      margin-top: 35px!important;
+      margin-bottom: 30px!important;
+      .p-heading-walbaum;
+    }
+  }
+}
+
+.page-news  {
+  #block-panels-mini-newsletter-form {
+  margin-top: 0px;
+  padding-bottom: 30px;
+  p.newsletterintro {
+    .p-bodycopy;
+    margin: 13px 0;
+    float:left;
+  }
+  .newsletterheading {
+    background-color: @almost-black!important;
+    .box-title;
+  }
+  .button {
+    float: right;
+    margin: 0;
+    input {
+      padding: 0;
+      margin: 0;
+    font-family: Knockout;
+    font-size: 22px;
+    text-transform: uppercase;
+    height: 26px;
+    border: 0px;
+    background-color: transparent;
+    background: transparent;
+    text-align: right;
+    }
+  }
+  width: 280px;
+  float: left;
+  div {
+    width: 280px;
+    float: left;
+    span {
+      float: left;
+      .p-bodycopy;
+      text-transform: uppercase;
+      height: 23px;
+      width: 60px;
+      display: block;
+    }
+    input {
+      width: 220px;
+      float: right!important;
+      display: block;
+      height: 16px;
+      background-color: @highlight-grey;
+      border-color: #C3C9CD!important;
+    }
+  }
 }
 }

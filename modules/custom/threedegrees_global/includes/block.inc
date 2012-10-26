@@ -29,6 +29,11 @@ function threedegrees_global_block_info() {
     $blocks['servicesblurb'] = array(
     'info' => t('Services Blurb'),
   );
+
+      // Contact Page
+    $blocks['contactpage'] = array(
+    'info' => t('Contact Details'),
+  );
   return $blocks;
 }
 
@@ -100,6 +105,31 @@ function threedegrees_global_block_servicesblurb_view() {
 
   $content = '';
   $content .= '<div class="servicesblurb"><p> From sponsorship and commercial rights management to company rebrands, communication strategies, PR, graphic design and event management, our team utilises a strong network of contacts to provide exceptional results.</p></div>';
+
+  $block['content'] = $content;
+
+  return $block;
+}
+
+
+
+/**
+ * Renders the contact page block.
+ */
+function threedegrees_global_block_contactpage_view() {
+  $themepath = drupal_get_path('theme', 'threedegrees_theme');
+  $block = array();
+  $block['subject'] = '';
+
+  $content = '';
+  $content .= '<div class="contactustitle"><p>Contact Us</p></div>
+  <img class="map" src="/' . $themepath . '/css/img/map.png"></img>
+  <div class="contactdetails"><p class="contactbold">Need to get in touch with us? Call, fax, email or even write a letter. <br /> We look forward to hearing from you.</p>
+   <p>level 1 454a Church st, Richmond<br />
+      PO BOX 4233, Richmond East, VIC 3121<br /><br />
+      Ph: 03 8416 5999 <br/>
+      Fax: 03 9421 2966<br/>
+      E: info@3dm.com.au</div>';
 
   $block['content'] = $content;
 
