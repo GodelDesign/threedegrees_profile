@@ -34,6 +34,11 @@ function threedegrees_global_block_info() {
     $blocks['contactpage'] = array(
     'info' => t('Contact Details'),
   );
+
+          // Archie navigation widget
+    $blocks['archiveblock'] = array(
+    'info' => t('Archive Block'),
+  );
   return $blocks;
 }
 
@@ -130,6 +135,23 @@ function threedegrees_global_block_contactpage_view() {
       Ph: 03 8416 5999 <br/>
       Fax: 03 9421 2966<br/>
       E: info@3dm.com.au</div>';
+
+  $block['content'] = $content;
+
+  return $block;
+}
+
+
+/**
+ * Renders the archive navigationing block.
+ */
+function threedegrees_global_block_archiveblock_view() {
+  $themepath = drupal_get_path('theme', 'threedegrees_theme');
+  $block = array();
+  $block['subject'] = '';
+
+  $content = '';
+
 
   $block['content'] = $content;
 

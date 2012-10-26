@@ -177,8 +177,9 @@ terms[winter][name] = "Winter"
 terms[winter][vocabulary_machine_name] = season
 terms[winter][weight] = 8
 
+terms[twentytwelve][name] = "2012"
+terms[twentytwelve][vocabulary_machine_name] = year
 
-
-
-
+terms[twentythirteen[name] = "2013"
+terms[twentythirteen][vocabulary_machine_name] = year
 
