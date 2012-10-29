@@ -50,10 +50,13 @@ zones[postscript] = Postscript
 zones[footer] = Footer
 
 ; STYLESHEETS
+css[sorren.css][name] = Sorren Font
+css[sorren.css][description] = Information for Sorren font
+css[sorren.css][options][weight] = 11
 
 css[walbaum.css][name] = Walbaum Font
 css[walbaum.css][description] = Information for the Walbum font
-css[walbaum.css][options][weight] = 9
+css[walbaum.css][options][weight] = 12
 
 css[global.css.less][name] = Your custom global styles
 css[global.css.less][description] = This file holds all the globally active custom CSS of your theme.

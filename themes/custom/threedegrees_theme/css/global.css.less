@@ -4,6 +4,9 @@
 /* always reset */
 @import "reset.less";
 @import "stub.less";
+@import "sorren.css";
+@import "walbaum.css";
+@import "swiss.css";
 
 /* omega overrides */
 
@@ -80,7 +83,7 @@ html .block-panels-mini-menu {
   ul {
     li {
       float: left;
-      margin-left: 151px;
+      margin-left: 150px;
       a {
       text-transform: uppercase;
       .p-new-nav;
@@ -175,7 +178,7 @@ html #slideshow_pag {
   width: 100%;
   .transparent-white;
   position: absolute;
-  bottom: 12px;
+  margin-top: -29px;
 }
 
 #block-threedegrees-global-welcome {
@@ -192,7 +195,7 @@ html #slideshow_pag {
   float: left;
   margin-right: 30px;
 }
-/* please forggive me this is not a mixin because the alterable bits are too deep inside it */
+/* please forgive me this is not a mixin because the alterable bits are too deep inside it */
 #block-panels-mini-newsletter-form {
   margin-top: 21px;
   padding-bottom: 30px;
@@ -211,7 +214,7 @@ html #slideshow_pag {
     input {
       padding: 0;
       margin: 0;
-    font-family: Knockout;
+    font-family: 'sorren_exbold';
     font-size: 22px;
     text-transform: uppercase;
     height: 26px;
@@ -249,9 +252,9 @@ html #slideshow_pag {
   width: 670px;
   margin-bottom: 48px;
   margin-top: 20px;
-
   p {
     .p-intro-text;
+    margin-bottom: 32px
   }
 }
 
@@ -268,7 +271,10 @@ html #slideshow_pag {
   }
 }
 
+/* news previews */
+
 #block-views-news-block {
+  margin-bottom: 25px!important;
   h2 {
     .p-heading-walbaum ;
     padding-top: 25px;
@@ -282,6 +288,9 @@ html #slideshow_pag {
       .p-news-titles;
       margin-top: 18px;
       color: @almost-black;
+      p {
+        width: 145px;
+      }
     }
   }
   width: 900px;
@@ -479,7 +488,7 @@ html #slideshow_pag {
     input {
       padding: 0;
       margin: 0;
-    font-family: Knockout;
+    font-family: 'sorren_exbold';
     font-size: 22px;
     text-transform: uppercase;
     height: 26px;
