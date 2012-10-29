@@ -37,7 +37,7 @@ function threedegrees_global_menu() {
         $items['news'] = array(
     'title' => 'News', // Will likely be overriden by page_title module
     'description' => 'News',
-    'page callback' => 'threedegrees_global_blank_page',
+    'page callback' => 'threedegrees_global_news_page_redirect',
     'access callback' => TRUE, // Assume most use-cases require all users to see the front page
     'type' => MENU_CALLBACK,
     'file' => 'includes/threedegrees_global.pages.inc',

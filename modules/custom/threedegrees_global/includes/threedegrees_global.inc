@@ -57,3 +57,19 @@ function threedegrees_global_taxonomy_build_news_structure() {
 
   return $structure;
 }
+
+function threedegrees_global_get_recent_news_post() {
+  $query = 'SELECT n.nid
+    FROM `node` n
+    WHERE n.type = \'news\'
+    AND n.status = 1
+    ORDER BY n.created ASC
+    LIMIT 1';
+      $result = db_query($query);
+      $nid = NULL;
+        foreach($result as $row){
+          $nid = $row->nid;
+        }
+          return $nid;
+}
+

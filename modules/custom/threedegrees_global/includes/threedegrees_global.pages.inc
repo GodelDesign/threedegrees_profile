@@ -48,3 +48,12 @@ function threedegrees_global_incompatible_browser_page() {
   return $output;
 
 }
+
+function threedegrees_global_news_page_redirect() {
+  $nid = threedegrees_global_get_recent_news_post();
+  $node = node_load($nid);
+  $season_term = taxonomy_term_load($node->field_season['und'][0]['tid']);
+  $year_term = taxonomy_term_load($node->field_year['und'][0]['tid']);
+  $path = 'news/' . $year_term->name . '/' . $season_term->name;
+  drupal_goto($path);
+}

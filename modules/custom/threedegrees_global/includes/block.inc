@@ -150,8 +150,22 @@ function threedegrees_global_block_archiveblock_view() {
   $block = array();
   $block['subject'] = '';
 
-  $content = '';
+  $block_structure = threedegrees_global_taxonomy_build_news_structure();
 
+  $content = '';
+  foreach($block_structure as $year => $seasons) {
+    $season_list = array();
+    foreach($seasons as $season) {
+      $season_list[] = l($season, 'news/' . $year . '/' . $season);
+    }
+
+    $list_params = array(
+      'items' => $season_list,
+      'title' => $year,
+      'type' => 'ul',
+      );
+    $content .= theme('item_list', $list_params);
+  }
 
   $block['content'] = $content;
 
