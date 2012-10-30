@@ -7,6 +7,7 @@
 @import "sorren.css";
 @import "walbaum.css";
 @import "swiss.css";
+@import "proxima.css";
 
 /* omega overrides */
 
@@ -212,6 +213,7 @@ html #slideshow_pag {
     float: right;
     margin: 0;
     input {
+      border-radius: 0px!important;
       padding: 0;
       margin: 0;
     font-family: 'sorren_exbold';
@@ -222,6 +224,7 @@ html #slideshow_pag {
     background-color: transparent;
     background: transparent;
     text-align: right;
+    font-weight: normal!important;
     }
   }
   width: 200px;
@@ -375,32 +378,42 @@ html #slideshow_pag {
     width: 620px;
   }
   .group-right {
-    ul {
-      list-style: disc;
-      margin-left: 18px;
-      margin-top: 12px;
-      margin-bottom: 12px;
-    }
+
     p {
       margin-bottom: 12px;
     }
-      p.subheading {
-  font-size: 22px;
-  line-height: 20px;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  }
+
     width: 280px;
   }
 .field-name-field-additional-images {
-  .field-item{
+  .field-item {
       float: left;
       margin-right: 30px;
       margin-top: 18px;
   }
 }
 .field-name-body {
-  .p-bodycopy;
+  .field-items {
+    .field-item {
+      p.subheading {
+        font-size: 32px;
+        line-height: 28px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        font-family: 'sorren_exbold';
+  }
+      ul {
+        .p-bullets;
+      list-style: disc;
+      margin-left: 18px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+      p {
+        .p-bodycopy;
+      }
+    }
+  }
 
 }
 .field-name-field-long-title-tagline {
@@ -441,11 +454,16 @@ html #slideshow_pag {
 
 /* news overview page */
 
-#block-views-news-block-1 {
+.view-id-news.view-display-id-page_1 {
   width: 590px;
   float: left;
   margin-right: 30px;
   .view-content {
+    .newsbody {
+      p {
+        .p-bodycopy;
+      }
+    }
     .p-bodycopy;
     .longtitle {
       padding-top: 12px;
@@ -470,6 +488,11 @@ html #slideshow_pag {
 }
 
 .page-news  {
+  #block-system-main {
+    width: 590px;
+    float: left;
+    margin-right: 30px;
+  }
   #block-panels-mini-newsletter-form {
   margin-top: 0px;
   padding-bottom: 30px;
@@ -512,7 +535,9 @@ html #slideshow_pag {
       display: block;
     }
     input {
-      width: 220px;
+      border-radius: 0px!important;
+      font-weight: normal!important;
+      width: 205px;
       float: right!important;
       display: block;
       height: 16px;
@@ -523,7 +548,26 @@ html #slideshow_pag {
 }
 }
 
+/* news archive block! */
 
+.newsheaderreal {
+  position: absolute;
+  width: 900px;
+  margin-top: -64px;
+  .p-heading-walbaum;
+}
+
+#block-threedegrees-global-archiveblock {
+  float: left;
+  .item-list {
+    h3 {
+      .p-intro-text;
+    }
+    ul {
+      .p-bodycopy;
+    }
+  }
+}
 /* contact us page */
 
 .block-threedegrees-global-contactpage {
