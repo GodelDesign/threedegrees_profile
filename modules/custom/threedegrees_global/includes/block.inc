@@ -157,6 +157,7 @@ function threedegrees_global_block_archiveblock_view() {
   $block['subject'] = '';
 
   $block_structure = threedegrees_global_taxonomy_build_news_structure();
+  krsort($block_structure);
 
   $content = '';
   foreach($block_structure as $year => $seasons) {
