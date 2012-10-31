@@ -37,6 +37,8 @@ libraries[profiler][download][url] = "http://ftp.drupal.org/files/projects/profi
 
 ; projects[example][version] = "3.9"
 ; projects[example][subdir] = "contrib"
+projects[draggableviews][version] = "2.0"
+projects[draggableviews][subdir] = "contrib"
 
 ; Dev Snapshot
 
