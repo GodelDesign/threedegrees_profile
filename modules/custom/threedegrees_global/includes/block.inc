@@ -35,10 +35,16 @@ function threedegrees_global_block_info() {
     'info' => t('Contact Details'),
   );
 
-          // Archie navigation widget
+          // Archive navigation widget
     $blocks['archiveblock'] = array(
     'info' => t('Archive Block'),
   );
+
+          // Seasonal news header
+    $blocks['newsheader'] = array(
+    'info' => t('Seasonal News Header'),
+  );
+
   return $blocks;
 }
 
@@ -166,6 +172,26 @@ function threedegrees_global_block_archiveblock_view() {
       );
     $content .= theme('item_list', $list_params);
   }
+
+  $block['content'] = $content;
+
+  return $block;
+}
+
+
+/**
+ * Renders the seasonal news header block.
+ */
+function threedegrees_global_block_newsheader_view() {
+  $themepath = drupal_get_path('theme', 'threedegrees_theme');
+  $block = array();
+  $block['subject'] = '';
+
+  $season = arg(2);
+  $year = arg(1);
+  $year = substr($year, -2);
+
+  $content = '<p class=\'seasonalheader\'>' . $season . ' NEWS ' . '\'' . $year . '</p>';
 
   $block['content'] = $content;
 
