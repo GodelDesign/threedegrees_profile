@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * template_d7_global.features.wysiwyg.inc
+ * threedegrees_global.features.wysiwyg.inc
  */
 
 /**
  * Implements hook_wysiwyg_default_profiles().
  */
-function template_d7_global_wysiwyg_default_profiles() {
+function threedegrees_global_wysiwyg_default_profiles() {
   $profiles = array();
 
   // Exported profile: wysiwyg_basic
@@ -32,6 +32,9 @@ function template_d7_global_wysiwyg_default_profiles() {
           'link' => 1,
           'unlink' => 1,
           'code' => 1,
+        ),
+        'font' => array(
+          'styleselect' => 1,
         ),
         'fullscreen' => array(
           'fullscreen' => 1,
@@ -62,7 +65,7 @@ function template_d7_global_wysiwyg_default_profiles() {
       'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
       'css_setting' => 'none',
       'css_path' => '',
-      'css_classes' => '',
+      'css_classes' => 'subheading=subheading',
     ),
     'metatags' => array(),
   );

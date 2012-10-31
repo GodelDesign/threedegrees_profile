@@ -3,19 +3,19 @@
 /**
  * Generates a blank page for menu callbacks
  */
-function template_d7_global_blank_page() {
+function threedegrees_global_blank_page() {
   return '';
 }
 
 /**
  * Generates a page to block unsupported browsers
  */
-function template_d7_global_incompatible_browser_page() {
-  
+function threedegrees_global_incompatible_browser_page() {
+
   /* add some extra CSS to the page that we don't normally include */
-  drupal_add_css(drupal_get_path('module', 'template_d7_global') . '/css/browser-deny.css', 'file');
+  drupal_add_css(drupal_get_path('module', 'threedegrees_global') . '/css/browser-deny.css', 'file');
   $browser = browscap_get_browser();
-  
+
   $output = '';
   $output .= '<table width="100%">';
   $output .= '<tr>';
@@ -44,7 +44,16 @@ function template_d7_global_incompatible_browser_page() {
   $output .= '<td width="10000"></td>';
   $output .= '</tr>';
   $output .= '</table>';
-  
+
   return $output;
-  
+
+}
+
+function threedegrees_global_news_page_redirect() {
+  $nid = threedegrees_global_get_recent_news_post();
+  $node = node_load($nid);
+  $season_term = taxonomy_term_load($node->field_season['und'][0]['tid']);
+  $year_term = taxonomy_term_load($node->field_year['und'][0]['tid']);
+  $path = 'news/' . $year_term->name . '/' . $season_term->name;
+  drupal_goto($path);
 }

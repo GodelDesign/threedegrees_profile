@@ -7,13 +7,13 @@
  * @return
  *   TRUE if browser is in the blacklist, FALSE otherwise
  */
-function template_d7_global_detect_unsupported_browser() {
-  
+function threedegrees_global_detect_unsupported_browser() {
+
   $browser = browscap_get_browser();
   $browser_unsupported = FALSE;
-  
+
   $ie_compatibility_mode = (stripos($browser['useragent'], 'Trident') === FALSE) ? TRUE : FALSE;
-  
+
   switch($browser['browser']) {
     case 'IE':
       /* don't support IE6 and below */
@@ -24,30 +24,30 @@ function template_d7_global_detect_unsupported_browser() {
     default:
     break;
   }
-  
+
   return $browser_unsupported;
 }
 
 /**
  * Test if we should redirect a browser to the unsupported browsers page
  *
- * This is essentially just a wrapper around template_d7_global_detect_unsupported_browser()
+ * This is essentially just a wrapper around threedegrees_global_detect_unsupported_browser()
  *
  * @return
  *   TRUE if we need to redirect the user, FALSE otherwise
  */
-function template_d7_global_unsupported_browser_redirect_test() {
-  
+function threedegrees_global_unsupported_browser_redirect_test() {
+
   /* if the browser is unsupported disable cache for every page that isn't the browser warning page */
   $redirect = FALSE;
-  $browser_unsupported = template_d7_global_detect_unsupported_browser();
+  $browser_unsupported = threedegrees_global_detect_unsupported_browser();
   $uri = request_uri();
   $uri = ltrim($uri, '/');
-  
+
   if($browser_unsupported && $uri != 'browser-unsupported') {
     $redirect = TRUE;
   }
-  
+
   return $redirect;
 }
 
@@ -57,42 +57,44 @@ function template_d7_global_unsupported_browser_redirect_test() {
  * @return
  *   TRUE if we want to disable the page cache, FALSE if we want to allow caching
  */
-function template_d7_global_disable_page_cache_test() {
-  
+function threedegrees_global_disable_page_cache_test() {
+
   /* the page cache is generally a good thing.. */
   $disable_page_cache = FALSE;
-  
+
   /* don't cache if we need to redirect a user with an unsupported browser */
-  $disable_page_cache = template_d7_global_unsupported_browser_redirect_test();
-  
+  $disable_page_cache = threedegrees_global_unsupported_browser_redirect_test();
+
   return $disable_page_cache;
 }
 
 /**
  * Implementation of hook_boot()
  */
-function template_d7_global_boot() {
-  
+function threedegrees_global_boot() {
+
   /* This will only work if the dynamic_cache module is installed */
-  $disable_page_cache = template_d7_global_disable_page_cache_test();
+  $disable_page_cache = threedegrees_global_disable_page_cache_test();
   if($disable_page_cache) {
-   $GLOBALS['conf']['cache'] = FALSE; 
+   $GLOBALS['conf']['cache'] = FALSE;
   }
-    
+
   return;
 }
 
 /**
  * Implementation of hook_init()
  */
-function template_d7_global_init() {
-  
+function threedegrees_global_init() {
+
   /* that's right, we're doing redirects in init instead of boot */
   /* this relies on us forcing the page not to cache in boot */
-  $unsupported_browser_redirect_required = template_d7_global_unsupported_browser_redirect_test();
+  $unsupported_browser_redirect_required = threedegrees_global_unsupported_browser_redirect_test();
   if($unsupported_browser_redirect_required) {
     drupal_goto('browser-unsupported');
   }
-    
+
+  threedegrees_global_taxonomy_build_news_structure();
+
   return;
 }

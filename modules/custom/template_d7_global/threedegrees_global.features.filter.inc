@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * template_d7_global.features.filter.inc
+ * threedegrees_global.features.filter.inc
  */
 
 /**
  * Implements hook_filter_default_formats().
  */
-function template_d7_global_filter_default_formats() {
+function threedegrees_global_filter_default_formats() {
   $formats = array();
 
   // Exported format: Wysiwyg basic.
@@ -22,7 +22,7 @@ function template_d7_global_filter_default_formats() {
         'weight' => '-10',
         'status' => '1',
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd><subtitle><ul><li><p><br>',
           'filter_html_help' => 0,
           'filter_html_nofollow' => 0,
         ),

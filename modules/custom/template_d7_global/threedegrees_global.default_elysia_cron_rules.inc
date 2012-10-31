@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * template_d7_global.default_elysia_cron_rules.inc
+ * threedegrees_global.default_elysia_cron_rules.inc
  */
 
 /**
  * Implements hook_default_elysia_cron_rules().
  */
-function template_d7_global_default_elysia_cron_rules() {
+function threedegrees_global_default_elysia_cron_rules() {
   $cron_rules = array();
 
   $cron_rule = new stdClass;

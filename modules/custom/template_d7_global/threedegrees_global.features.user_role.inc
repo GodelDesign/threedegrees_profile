@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * template_d7_global.features.user_role.inc
+ * threedegrees_global.features.user_role.inc
  */
 
 /**
  * Implements hook_user_default_roles().
  */
-function template_d7_global_user_default_roles() {
+function threedegrees_global_user_default_roles() {
   $roles = array();
 
   // Exported role: administrator.
@@ -32,6 +32,12 @@ function template_d7_global_user_default_roles() {
   $roles['editor'] = array(
     'name' => 'editor',
     'weight' => '4',
+  );
+
+  // Exported role: staff.
+  $roles['staff'] = array(
+    'name' => 'staff',
+    'weight' => '6',
   );
 
   return $roles;

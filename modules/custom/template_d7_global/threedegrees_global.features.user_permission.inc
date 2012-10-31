@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * template_d7_global.features.user_permission.inc
+ * threedegrees_global.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function template_d7_global_user_default_permissions() {
+function threedegrees_global_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: access administration pages.
@@ -47,6 +47,7 @@ function template_d7_global_user_default_permissions() {
       1 => 'author',
       2 => 'contributor',
       3 => 'editor',
+      4 => 'staff',
     ),
     'module' => 'coffee',
   );
@@ -93,6 +94,7 @@ function template_d7_global_user_default_permissions() {
       1 => 'author',
       2 => 'contributor',
       3 => 'editor',
+      4 => 'staff',
     ),
     'module' => 'dashboard',
   );
@@ -212,6 +214,7 @@ function template_d7_global_user_default_permissions() {
     'name' => 'administer google analytics',
     'roles' => array(
       0 => 'administrator',
+      1 => 'staff',
     ),
     'module' => 'googleanalytics',
   );
@@ -330,6 +333,7 @@ function template_d7_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
+      2 => 'staff',
     ),
     'module' => 'taxonomy',
   );
@@ -382,6 +386,7 @@ function template_d7_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
+      2 => 'staff',
     ),
     'module' => 'node',
   );
@@ -534,8 +539,9 @@ function template_d7_global_user_default_permissions() {
       0 => 'administrator',
       1 => 'author',
       2 => 'editor',
+      3 => 'staff',
     ),
-    'module' => 'template_d7_global',
+    'module' => 'threedegrees_global',
   );
 
   // Exported permission: revert revisions.
@@ -598,6 +604,7 @@ function template_d7_global_user_default_permissions() {
       1 => 'author',
       2 => 'contributor',
       3 => 'editor',
+      4 => 'staff',
     ),
     'module' => 'imageeditor',
   );
@@ -631,7 +638,9 @@ function template_d7_global_user_default_permissions() {
   // Exported permission: use text format wysiwyg_basic.
   $permissions['use text format wysiwyg_basic'] = array(
     'name' => 'use text format wysiwyg_basic',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'staff',
+    ),
     'module' => 'filter',
   );
 

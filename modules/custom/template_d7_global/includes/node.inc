@@ -3,7 +3,7 @@
 /**
  * Implements hook_node_presave()
  */
-function template_d7_global_node_presave($node) {
+function threedegrees_global_node_presave($node) {
   
   /* We want to enforce users without the "Publish content" permission not being able to publish content */
   if(!user_access('publish_content')){    
