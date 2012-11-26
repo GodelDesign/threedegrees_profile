@@ -18,7 +18,10 @@ $(".views-field-field-slideshow-images ul").carouFredSel({
     height: 370
   },
   pagination: "div.pagination",
-  scroll: 1000
+  scroll: {
+        fx: "crossfade",
+        duration: 1000
+  }
 });
 
   });
