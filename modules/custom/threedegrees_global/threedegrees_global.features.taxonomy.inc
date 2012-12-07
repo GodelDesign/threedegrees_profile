@@ -27,5 +27,14 @@ function threedegrees_global_taxonomy_default_vocabularies() {
       'weight' => '0',
       'metatags' => array(),
     ),
+    'year' => array(
+      'name' => 'Year',
+      'machine_name' => 'year',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'metatags' => array(),
+    ),
   );
 }

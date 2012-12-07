@@ -45,6 +45,10 @@ function threedegrees_global_block_info() {
     'info' => t('Seasonal News Header'),
   );
 
+              // Menu
+    $blocks['menuclock'] = array(
+    'info' => t('Menu as block'),
+  );
   return $blocks;
 }
 
@@ -53,7 +57,6 @@ function threedegrees_global_block_info() {
  */
 function threedegrees_global_block_view($delta = ''){
   $ret = '';
-
   $function = 'threedegrees_global_block_' . $delta . '_view';
   if(function_exists($function)) {
     $ret = $function();
@@ -195,6 +198,42 @@ function threedegrees_global_block_newsheader_view() {
   $content = '<p class=\'seasonalheader\'>' . $season . ' NEWS ' . '\'' . $year . '</p>';
 
   $block['content'] = $content;
+
+  return $block;
+}
+
+/**
+ * Renders the  menu block.
+ */
+
+function threedegrees_global_block_menuclock_view() {
+  $block = array();
+  $block['subject'] = '';
+
+  $link_data = array(
+    'home' =>'Home',
+    'services' => 'Services',
+    'projects' => 'Projects',
+    'news' => 'News',
+    'contactus' => 'Contact Us',
+  );
+
+  $markup = array();
+
+  foreach($link_data as $path => $title){
+  $title = '<span> ' . $title . '</span>';
+  $item_array = array('data' => l($title, $path, array('html' => TRUE)), 'class' => array($path));
+    $markup[$path] = $item_array;
+  }
+
+  $variables = array(
+  'type'=>'ul',
+  'items'=> $markup
+  );
+
+  $content = theme('item_list', $variables);
+
+  $block['content'] =  $content;
 
   return $block;
 }

@@ -13,6 +13,10 @@ function threedegrees_global_ctools_plugin_api() {
     return array("version" => "3");
   }
   list($module, $api) = func_get_args();
+  if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "elysia_cron" && $api == "default_elysia_cron_rules") {
     return array("version" => "1");
   }
@@ -61,6 +65,50 @@ function threedegrees_global_image_default_styles() {
     ),
   );
 
+  // Exported image style: project_featured.
+  $styles['project_featured'] = array(
+    'name' => 'project_featured',
+    'effects' => array(
+      6 => array(
+        'label' => 'Scale and Smart Crop',
+        'help' => 'Similar to "Scale And Crop", but preserves the portion of the image with the most entropy.',
+        'effect callback' => 'smartcrop_scale_effect',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'smartcrop',
+        'name' => 'smartcrop_scale_and_crop',
+        'data' => array(
+          'width' => '590',
+          'height' => '390',
+          'upscale' => 1,
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: project_small.
+  $styles['project_small'] = array(
+    'name' => 'project_small',
+    'effects' => array(
+      5 => array(
+        'label' => 'Scale and Smart Crop',
+        'help' => 'Similar to "Scale And Crop", but preserves the portion of the image with the most entropy.',
+        'effect callback' => 'smartcrop_scale_effect',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'smartcrop',
+        'name' => 'smartcrop_scale_and_crop',
+        'data' => array(
+          'width' => '280',
+          'height' => '215',
+          'upscale' => 1,
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
   // Exported image style: project_thumbnail.
   $styles['project_thumbnail'] = array(
     'name' => 'project_thumbnail',
@@ -76,7 +124,7 @@ function threedegrees_global_image_default_styles() {
         'data' => array(
           'width' => '280',
           'height' => '175',
-          'upscale' => 0,
+          'upscale' => 1,
         ),
         'weight' => '1',
       ),

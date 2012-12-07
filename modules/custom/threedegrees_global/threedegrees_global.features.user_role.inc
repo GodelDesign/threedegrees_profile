@@ -34,5 +34,11 @@ function threedegrees_global_user_default_roles() {
     'weight' => '4',
   );
 
+  // Exported role: staff.
+  $roles['staff'] = array(
+    'name' => 'staff',
+    'weight' => '6',
+  );
+
   return $roles;
 }
