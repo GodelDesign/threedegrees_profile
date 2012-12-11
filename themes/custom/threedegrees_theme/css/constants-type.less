@@ -25,7 +25,7 @@
   font-family: 'WalbaumFSRegular';
   font-size: 28px;
   line-height: 32px;
-  color: black;
+  color: @almost-black;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
@@ -48,14 +48,14 @@
   font-size: 32px;
   line-height: 28px;
   letter-spacing: 1px;
-  color: @almost-black;
+  color: @news-tile-dark;
   text-transform: uppercase;
 }
 
 /* this mixin requires a div wrapper with a p inside */
 .box-title {
       margin-top: 0px;
-      background-color: @highlight-grey;
+      background-color: @news-tile-grey;
       display: block;
       width: 100%;
       height: 20px;
@@ -75,13 +75,14 @@
   font-size: 15px;
   li {
     line-height: 19px;
+    color: @almost-black;
     }
 }
 
 .p-bodycopy {
   font-family: 'ProximaNovaCnRgRegular';
   font-size: 15px;
-  line-height: 23px;
+  line-height: 20px;
   color: @almost-black;
 }
 

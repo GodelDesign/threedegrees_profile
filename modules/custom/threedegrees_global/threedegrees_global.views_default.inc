@@ -65,7 +65,7 @@ function threedegrees_global_views_default_views() {
   $handler->display->display_options['fields']['field_slideshow_images']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_slideshow_images']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_slideshow_images']['settings'] = array(
-    'image_style' => '',
+    'image_style' => 'slideshow',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_slideshow_images']['group_rows'] = 1;
@@ -399,7 +399,7 @@ function threedegrees_global_views_default_views() {
   $handler = $view->new_display('block', 'news archive', 'block_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Main Image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
   $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
   $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';
@@ -752,7 +752,7 @@ function threedegrees_global_views_default_views() {
   $handler->display->display_options['fields']['body']['empty_zero'] = 0;
   $handler->display->display_options['fields']['body']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['body']['field_api_classes'] = 0;
-  /* Field: Content: Main Image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
   $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
   $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';
@@ -1231,7 +1231,7 @@ function threedegrees_global_views_default_views() {
   $handler->display->display_options['fields']['field_long_title_tagline']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_long_title_tagline']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_long_title_tagline']['field_api_classes'] = 0;
-  /* Field: Content: Main Image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
   $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
   $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';
@@ -1568,11 +1568,11 @@ function threedegrees_global_views_default_views() {
   $handler->display->display_options['fields']['nothing']['hide_empty'] = 0;
   $handler->display->display_options['fields']['nothing']['empty_zero'] = 0;
   $handler->display->display_options['fields']['nothing']['hide_alter_empty'] = 0;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Content: Updated date */
+  $handler->display->display_options['sorts']['changed']['id'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['table'] = 'node';
+  $handler->display->display_options['sorts']['changed']['field'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';

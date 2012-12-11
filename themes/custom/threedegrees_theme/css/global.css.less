@@ -94,6 +94,9 @@ html .block-threedegrees-global-menuclock {
       background-repeat: no-repeat;
       margin-right: 92px;
     }
+    a:hover {
+        opacity: 0.8;
+    }
     .home {
       a {
         background-image: url('img/home.png');
@@ -259,7 +262,7 @@ html #slideshow_pag {
     display: none;
   }
   .newsletterheading {
-    background-color: #3f3f3f!important;
+    background-color: #555c5f!important;
     .box-title;
     margin-bottom: 13px;
   }
@@ -271,9 +274,9 @@ html #slideshow_pag {
       padding: 0;
       margin: 0;
     font-family: 'sorren_exbold';
-    font-size: 22px;
+    font-size: 30px;
     text-transform: uppercase;
-    height: 26px;
+    height: 30px;
     border: 0px;
     background-color: transparent;
     background: transparent;
@@ -291,15 +294,18 @@ html #slideshow_pag {
       .p-bodycopy;
       text-transform: uppercase;
       height: 23px;
-      width: 80px;
+      width: 70px;
       display: block;
+      label {
+        padding-top: 4px;
+      }
     }
     input {
-      width: 120px;
+      width: 130px;
       float: right!important;
       display: block;
-      height: 16px;
-      background-color: @footer-grey;
+      height: 20px;
+      background-color: @input-grey;
       border-color: #C3C9CD!important;
     }
   }
@@ -344,7 +350,7 @@ html #slideshow_pag {
     div {
       .p-news-titles;
       margin-top: 15px;
-      color: @almost-black;
+      color: @news-tile-dark!important;
       p {
         width: 145px;
         line-height: 30px;
@@ -353,6 +359,9 @@ html #slideshow_pag {
   }
   width: 900px;
   margin: 0 auto;
+  .shortitle:hover{
+    opacity: 0.8;
+  }
 }
 
 
@@ -407,7 +416,7 @@ html #slideshow_pag {
     margin-top: 16px;
   }
   img:hover {
-  opacity: 0.5;
+  opacity: 0.9;
   }
   td.col-1 {
     padding-left: 0px;
@@ -445,6 +454,9 @@ html #slideshow_pag {
 .node-project.view-mode-full {
   .group-left {
     width: 620px;
+      .field-name-field-second-large-image {
+              padding-top: 18px;
+      }
   }
   .group-right {
 
@@ -529,6 +541,7 @@ html #slideshow_pag {
   margin-right: 30px;
   .view-content {
     .newsbody {
+      padding-bottom: 25px;
       p {
         .p-bodycopy;
       }
@@ -571,7 +584,7 @@ html #slideshow_pag {
     float:left;
   }
   .newsletterheading {
-    background-color: #3f3f3f!important;
+    background-color: #555c5f!important;
     .box-title;
   }
   .button {
@@ -581,9 +594,9 @@ html #slideshow_pag {
       padding: 0;
       margin: 0;
     font-family: 'sorren_exbold';
-    font-size: 22px;
+    font-size: 30px;
     text-transform: uppercase;
-    height: 26px;
+    height: 30px;
     border: 0px;
     background-color: transparent;
     background: transparent;
@@ -610,7 +623,7 @@ html #slideshow_pag {
       float: right!important;
       display: block;
       height: 16px;
-      background-color: @footer-grey;
+      background-color: @input-grey;
       border-color: #C3C9CD!important;
     }
   }

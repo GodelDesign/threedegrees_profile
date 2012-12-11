@@ -18,7 +18,7 @@ function threedegrees_global_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'other_projects_block' => array(
-      'weight' => '4',
+      'weight' => '5',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -119,7 +119,8 @@ function threedegrees_global_ds_layout_settings_info() {
       ),
       'left' => array(
         0 => 'field_main_image',
-        1 => 'field_additional_images',
+        1 => 'field_second_large_image',
+        2 => 'field_additional_images',
       ),
       'right' => array(
         0 => 'body',
@@ -131,6 +132,7 @@ function threedegrees_global_ds_layout_settings_info() {
     'fields' => array(
       'field_long_title_tagline' => 'header',
       'field_main_image' => 'left',
+      'field_second_large_image' => 'left',
       'field_additional_images' => 'left',
       'body' => 'right',
       'other_projects_block' => 'footer',

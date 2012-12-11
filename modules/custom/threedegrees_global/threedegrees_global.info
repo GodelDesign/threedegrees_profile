@@ -100,6 +100,7 @@ features[field][] = node-project-body
 features[field][] = node-project-field_additional_images
 features[field][] = node-project-field_long_title_tagline
 features[field][] = node-project-field_main_image
+features[field][] = node-project-field_second_large_image
 features[field][] = node-services_list-body
 features[field][] = node-services_list-field_category
 features[filter][] = wysiwyg_basic

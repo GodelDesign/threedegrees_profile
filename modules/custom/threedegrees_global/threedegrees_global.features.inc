@@ -57,8 +57,8 @@ function threedegrees_global_image_default_styles() {
         'name' => 'smartcrop_scale_and_crop',
         'data' => array(
           'width' => '590',
-          'height' => '175',
-          'upscale' => 0,
+          'height' => '246',
+          'upscale' => 1,
         ),
         'weight' => '1',
       ),

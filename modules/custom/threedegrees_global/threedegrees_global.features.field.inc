@@ -856,7 +856,7 @@ function threedegrees_global_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -885,7 +885,7 @@ function threedegrees_global_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '31',
+        'weight' => '5',
       ),
     ),
   );
@@ -943,7 +943,7 @@ function threedegrees_global_field_default_fields() {
             'image_style' => 'project_small',
           ),
           'type' => 'image',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1048,7 +1048,7 @@ function threedegrees_global_field_default_fields() {
           'svgedit_position' => '0',
         ),
         'type' => 'image_image',
-        'weight' => '34',
+        'weight' => '9',
       ),
     ),
   );
@@ -1124,7 +1124,7 @@ function threedegrees_global_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '32',
+        'weight' => '6',
       ),
     ),
   );
@@ -1193,7 +1193,7 @@ function threedegrees_global_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_main_image',
-      'label' => 'Main Image',
+      'label' => 'Main image',
       'required' => 1,
       'settings' => array(
         'alt_field' => 0,
@@ -1287,7 +1287,170 @@ function threedegrees_global_field_default_fields() {
           'svgedit_position' => '0',
         ),
         'type' => 'image_image',
-        'weight' => '33',
+        'weight' => '7',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-project-field_second_large_image'.
+  $fields['node-project-field_second_large_image'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_second_large_image',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'project',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => '',
+            'image_style' => '',
+          ),
+          'type' => 'image',
+          'weight' => 4,
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => '',
+            'image_style' => 'project_featured',
+          ),
+          'type' => 'image',
+          'weight' => '2',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_second_large_image',
+      'label' => 'Second large image',
+      'required' => 1,
+      'settings' => array(
+        'alt_field' => 0,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'filefield_paths' => array(
+          'active_updating' => 0,
+          'file_name' => array(
+            'options' => array(
+              'pathauto' => 0,
+              'transliterate' => 0,
+            ),
+            'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+          ),
+          'file_path' => array(
+            'options' => array(
+              'pathauto' => 0,
+              'transliterate' => 0,
+            ),
+            'value' => '',
+          ),
+          'retroactive_update' => 0,
+        ),
+        'max_filesize' => '',
+        'max_resolution' => '',
+        'min_resolution' => '',
+        'title_field' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'aviary_falcon_enabled' => 0,
+          'aviary_falcon_position' => '0',
+          'aviary_feather_enabled' => 0,
+          'aviary_feather_position' => '0',
+          'aviary_peacock_enabled' => 0,
+          'aviary_peacock_position' => '0',
+          'aviary_phoenix_enabled' => 0,
+          'aviary_phoenix_position' => '0',
+          'aviary_raven_enabled' => 0,
+          'aviary_raven_position' => '0',
+          'filefield_sources' => array(
+            'filefield_sources' => array(
+              'attach' => 0,
+              'imageeditor' => 0,
+              'reference' => 0,
+              'remote' => 0,
+            ),
+            'source_attach' => array(
+              'absolute' => '0',
+              'attach_mode' => 'copy',
+              'path' => 'file_attach',
+            ),
+            'source_imageeditor' => array(
+              'source_imageeditor_image' => 0,
+            ),
+            'source_reference' => array(
+              'autocomplete' => '0',
+            ),
+          ),
+          'flauntr_styler_enabled' => 0,
+          'flauntr_styler_position' => '0',
+          'fotoflexer_enabled' => 0,
+          'fotoflexer_position' => '0',
+          'imageeditor_icons_position' => '0',
+          'imageeditor_replace' => 0,
+          'imageshack_upload_enabled' => 0,
+          'imageshack_upload_position' => '0',
+          'immio_upload_enabled' => 0,
+          'immio_upload_position' => '0',
+          'paintweb_enabled' => 0,
+          'paintweb_position' => '0',
+          'picnik_enabled' => 0,
+          'picnik_position' => '0',
+          'pixlr_editor_enabled' => 0,
+          'pixlr_editor_position' => '0',
+          'pixlr_express_enabled' => 0,
+          'pixlr_express_position' => '0',
+          'pixlr_upload_enabled' => 0,
+          'pixlr_upload_position' => '0',
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+          'snipshot_enabled' => 0,
+          'snipshot_position' => '0',
+          'sumopaint_enabled' => 0,
+          'sumopaint_position' => '0',
+          'svgedit_enabled' => 0,
+          'svgedit_position' => '0',
+        ),
+        'type' => 'image_image',
+        'weight' => '8',
       ),
     ),
   );
@@ -1442,7 +1605,9 @@ function threedegrees_global_field_default_fields() {
   t('Category');
   t('Long Title/Tagline');
   t('Main Image');
+  t('Main image');
   t('Season');
+  t('Second large image');
   t('Short Title');
   t('Slideshow Images');
   t('Sorting');
