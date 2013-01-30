@@ -39,12 +39,37 @@ function threedegrees_global_taxonomy_check_year_season_results($year, $season) 
   return $results;
 }
 
+/**
+ * Sort the seasons as requested by Luke.
+ * 1. Spring
+ * 2. Winter
+ * 3. Autumn
+ * 4. Summer
+ */
+function threedegrees_global_season_sort($a, $b) {
+  $scores = array(
+    'spring',
+    'winter',
+    'autumn',
+    'summer',
+  );
+  $a_score = array_search(strtolower($a['name']), $scores);
+  $b_score = array_search(strtolower($b['name']), $scores);
+
+  if($a_score == $b_score) {
+    return 0;
+  }
+  return ($a_score < $b_score) ? -1 : 1;
+}
+
 function threedegrees_global_taxonomy_build_news_structure() {
   $years_vocab = taxonomy_vocabulary_machine_name_load('year');
   $season_vocab = taxonomy_vocabulary_machine_name_load('season');
 
   $years_terms = threedegrees_global_taxonomy_get_terms_by_vid($years_vocab->vid);
   $season_terms = threedegrees_global_taxonomy_get_terms_by_vid($season_vocab->vid);
+
+  uasort($season_terms, 'threedegrees_global_season_sort');
 
   $structure = array();
   foreach($years_terms as $year) {

@@ -88,7 +88,7 @@ function threedegrees_global_block_frontpageblurb_view() {
   $block['subject'] = '';
 
   $content = '';
-  $content .= '<div class="frontpageblurb"><p> 3 Degrees Marketing is a Melbourne based marketing agency, with a strong brand reputation and an enviable list of clients across Australia and New Zealand.</p><p>From sponsorship and commercial rights management to company rebrands, communication strategies, PR, graphic design and event management, our team utilises a strong network of contacts to provide exceptional results.</p></div>';
+  $content .= '<div class="frontpageblurb"><p> 3 Degrees Marketing is a Melbourne based agency with a strong brand reputation and an enviable list of clients across Australia and New Zealand.</p><p>From sponsorship and commercial rights management to company rebrands, communication strategies, PR, graphic design and event management, our team utilises a strong network of contacts to provide exceptional results.</p></div>';
 
   $block['content'] = $content;
 
@@ -139,11 +139,11 @@ function threedegrees_global_block_contactpage_view() {
   $content .= '<div class="contactustitle"><p>Contact Us</p></div>
   <img class="map" src="/' . $themepath . '/css/img/map.png"></img>
   <div class="contactdetails"><p class="contactbold">Need to get in touch with us? Call, fax, email or even write a letter. <br /> We look forward to hearing from you.</p>
-   <p>level 1 454a Church st, Richmond<br />
+   <p>Level 1 454a Church St, Richmond<br />
       PO BOX 4233, Richmond East, VIC 3121<br /><br />
-      Ph: 03 8416 5999 <br/>
-      Fax: 03 9421 2966<br/>
-      E: info@3dm.com.au</div>';
+      Ph: +61 3 8416 5999 <br/>
+      Fax: +61 3 9421 2966<br/>
+      E: <a href="mailto:info@3dm.com.au">info@3dm.com.au</a></div>';
 
   $block['content'] = $content;
 
